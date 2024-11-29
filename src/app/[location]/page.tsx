@@ -4,11 +4,11 @@ import { notFound } from "next/navigation";
 const validLocations = ["lboro", "leicester", "notts"];
 
 interface PageProps {
-  params: { location: string };
+  params: { location: string }; // Match the expected structure
 }
 
-export default function LocationPage({ params }: PageProps) {
-  const { location } = params;
+export default async function LocationPage({ params }: { params: { location: string } }) {
+  const location = params.location;
 
   if (!validLocations.includes(location)) {
     console.error("Invalid Location:", location); // Log invalid location access
