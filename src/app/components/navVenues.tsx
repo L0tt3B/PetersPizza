@@ -1,7 +1,7 @@
 import React from "react";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
 interface NavMenuProps {
     onClose: () => void;
@@ -10,10 +10,17 @@ interface NavMenuProps {
 const NavVenues: React.FC<NavMenuProps> = ({ onClose }) => {
     const router = useRouter();
 
+    const validLocations = ["lboro", "leicester", "notts"];
+
     const handleLocationClick = (location: string) => {
+        if (!validLocations.includes(location)) {
+            console.error("Invalid location:", location); // Debugging
+            return;
+        }
         console.log("Navigating to:", location); // Debugging
         router.push(`/${location}`);
     };
+
 
     return (
         <div
@@ -32,25 +39,19 @@ const NavVenues: React.FC<NavMenuProps> = ({ onClose }) => {
             </div>
             <div className="w-full pl-4">
                 <ul>
-                    <li
-                        className="p-2 uppercase font-light text-2xl font-bold hover:text-orange-500 duration-100 cursor-pointer"
-                        onClick={() => handleLocationClick("lboro")}
-                    >
-                        LOUGHBOROUGH
-                    </li>
-                    <li
-                        className="p-2 uppercase font-light text-2xl font-bold hover:text-orange-500 duration-100 cursor-pointer"
-                        onClick={() => handleLocationClick("leicester")}
-                    >
-                        LEICESTER
-                    </li>
-                    <li
-                        className="p-2 uppercase font-light text-2xl font-bold hover:text-orange-500 duration-100 cursor-pointer"
-                        onClick={() => handleLocationClick("notts")}
-                    >
-                        NOTTINGHAM
-                    </li>
+                    {validLocations.map((location) => (
+                        <li
+                            key={location}
+                            className="p-2 uppercase font-light text-2xl font-bold hover:text-orange-500 duration-100 cursor-pointer"
+                            role="button"
+                            aria-label={`Navigate to ${location}`}
+                            onClick={() => handleLocationClick(location)}
+                        >
+                            {location.toUpperCase()}
+                        </li>
+                    ))}
                 </ul>
+
             </div>
         </div>
     );
