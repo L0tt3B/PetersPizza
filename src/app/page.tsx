@@ -23,7 +23,7 @@ export default function Home() {
     <div className={`flex flex-col min-h-screen flex-grow transition-all duration-300 ${isSidenavOpen ? "mr-64" : "mr-0"}`}>
       <SideNav isOpen={isSidenavOpen} onClose={() => setSidenavOpen(false)} />
       <header className="fixed top-0 left-0 w-full z-50">
-        <Navbar onToggleSidenav={toggleSidenav} isSideNavOpen={isSidenavOpen}/>
+        <Navbar onToggleSidenav={toggleSidenav}/>
       </header>
       <main className="w-full flex-grow bg-slate-100 font-[family-name:var(--font-geist-sans)]">
         <div className="h-screen relative">

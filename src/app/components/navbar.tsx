@@ -6,7 +6,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 interface NavbarProps {
     onToggleSidenav: () => void;
-    isSideNavOpen: boolean;
 }
 
 
