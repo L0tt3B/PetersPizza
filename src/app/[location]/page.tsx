@@ -3,13 +3,8 @@ import { notFound } from "next/navigation";
 
 const validLocations = ["lboro", "leicester", "notts"];
 
-interface PageProps {
-    params: {
-        location: string;
-    };
-}
-
-export default function LocationPage({ params }: PageProps) {
+export default async function LocationPage({ params }: { params: { location: string } }) {
+    // Await params if it could be a Promise
     const location = params.location;
 
     if (!validLocations.includes(location)) {
