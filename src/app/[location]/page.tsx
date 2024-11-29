@@ -3,20 +3,21 @@ import { notFound } from "next/navigation";
 
 const validLocations = ["lboro", "leicester", "notts"];
 
-export default async function LocationPage({ params }: { params: { location: string } }) {
-    // Await params if it could be a Promise
-    const location = params.location;
+const locationNames: Record<string, string> = {
+    lboro: "Loughborough",
+    leicester: "Leicester",
+    notts: "Nottingham",
+};
 
-    if (!validLocations.includes(location)) {
+export default function LocationPage({ params }: { params: { location?: string } }) {
+    // Safely extract location from params
+    const location = params?.location;
+
+    if (!location || !validLocations.includes(location)) {
         console.error("Invalid Location:", location); // Log invalid location access
         notFound(); // Trigger a 404 for invalid locations
+        return null; // Ensure no further rendering
     }
-
-    const locationNames: Record<string, string> = {
-        lboro: "Loughborough",
-        leicester: "Leicester",
-        notts: "Nottingham",
-    };
 
     return (
         <div className="relative h-1/2 text-white">
