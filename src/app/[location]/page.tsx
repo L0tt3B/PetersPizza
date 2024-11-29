@@ -15,14 +15,13 @@ const locationNames: Record<string, string> = {
   notts: "Nottingham",
 };
 
-export default async function LocationPage({ params }: LocationParams): Promise<JSX.Element | null> {
+export default async function LocationPage({ params }: LocationParams): Promise<JSX.Element> {
   const { location } = params;
 
   // Validate location and trigger 404 for invalid entries
   if (!validLocations.includes(location)) {
     console.error("Invalid Location:", location);
-    notFound();
-    return null;
+    notFound(); // This ends execution and renders a 404 page
   }
 
   return (
