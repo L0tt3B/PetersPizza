@@ -1,29 +1,25 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-// Define valid locations as a constant array
 const validLocations = ["lboro", "leicester", "notts"] as const;
 
-// Define location names as a mapping
 const locationNames: Record<typeof validLocations[number], string> = {
   lboro: "Loughborough",
   leicester: "Leicester",
   notts: "Nottingham",
 };
 
-// Define the type for the page parameters
-type LocationPageProps = {
-  params: {
-    location: typeof validLocations[number];
-  };
-};
+// Generate static params for export
+export function generateStaticParams() {
+  return validLocations.map((location) => ({ location }));
+}
 
-export default function LocationPage({ params }: LocationPageProps) {
-  const { location } = params;
+export default function LocationPage({ params }: { params: { location: string } }) {
+  const location = params.location as typeof validLocations[number];
 
-  // Validate the location parameter
+  // Ensure the location is valid
   if (!validLocations.includes(location)) {
-    notFound(); // Trigger a 404 page if the location is invalid
+    notFound();
   }
 
   return (
