@@ -1,22 +1,29 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-const validLocations = ["lboro", "leicester", "notts"];
+const validLocations: string[] = ["lboro", "leicester", "notts"];
 
-export default async function LocationPage({ params }: { params: { location: string } }) {
-  const location = params.location;
+type LocationParams = {
+  params: {
+    location: string;
+  };
+};
 
+const locationNames: Record<string, string> = {
+  lboro: "Loughborough",
+  leicester: "Leicester",
+  notts: "Nottingham",
+};
+
+export default async function LocationPage({ params }: LocationParams): Promise<JSX.Element | null> {
+  const { location } = params;
+
+  // Validate location and trigger 404 for invalid entries
   if (!validLocations.includes(location)) {
-    console.error("Invalid Location:", location); // Log invalid location access
-    notFound(); // Trigger a 404 for invalid locations
+    console.error("Invalid Location:", location);
+    notFound();
     return null;
   }
-
-  const locationNames: Record<string, string> = {
-    lboro: "Loughborough",
-    leicester: "Leicester",
-    notts: "Nottingham",
-  };
 
   return (
     <div className="relative h-1/2 text-white">
@@ -25,6 +32,7 @@ export default async function LocationPage({ params }: { params: { location: str
         alt={`${locationNames[location]} Venue`}
         fill
         className="object-cover absolute z-0"
+        priority // Optimize loading
       />
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen bg-black bg-opacity-50">
         <h1 className="text-4xl uppercase font-bold mb-6">
