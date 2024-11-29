@@ -3,9 +3,13 @@ import { notFound } from "next/navigation";
 
 const validLocations = ["lboro", "leicester", "notts"];
 
-export default function LocationPage({ params }: { params: { location: string } }) {
-    console.log("Dynamic Route Params:", params); // Debug dynamic route parameters
+interface PageProps {
+    params: {
+        location: string;
+    };
+}
 
+export default function LocationPage({ params }: PageProps) {
     const location = params.location;
 
     if (!validLocations.includes(location)) {
@@ -31,7 +35,9 @@ export default function LocationPage({ params }: { params: { location: string } 
 
             {/* Overlay Content */}
             <div className="relative z-10 flex flex-col items-center justify-center min-h-screen bg-black bg-opacity-50">
-                <h1 className="text-4xl uppercase font-bold mb-6">{locationNames[location]}</h1>
+                <h1 className="text-4xl uppercase font-bold mb-6">
+                    {locationNames[location]}
+                </h1>
                 <p className="text-lg">
                     Welcome to our {locationNames[location]} venue! Explore what we offer at this
                     amazing location.
