@@ -10,7 +10,7 @@ interface NavbarProps {
 }
 
 
-const Navbar: React.FC<NavbarProps> = ({onToggleSidenav, isSideNavOpen}) => {
+const Navbar: React.FC<NavbarProps> = ({onToggleSidenav}) => {
     const [isScrolling, setIsScrolling] = useState(false);
 
     useEffect(() => {
