@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const FrontHeader = () => {
     return (
       <div className="w-full h-full text-white">

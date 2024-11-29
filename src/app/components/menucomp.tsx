@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const MenuComponent = () => {
   return (
     <div className="w-full text-black py-4 px-8 text-center my-5">

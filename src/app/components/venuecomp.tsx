@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const VenueComponent = () => {
   return (
     <div className="w-full text-black py-4 text-center my-5">
