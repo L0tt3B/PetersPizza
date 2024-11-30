@@ -58,13 +58,27 @@ export default function LeicesterPage() {
             >
               Make a Booking
             </a>
+
+            {/* Google Map */}
+            <div className="mt-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.510282989486!2d-1.133953!3d52.631907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487761203878e491%3A0x37792d694c445065!2s9%20Welford%20Pl%2C%20Leicester%20LE1%206ZH%2C%20UK!5e0!3m2!1sen!2suk!4v1691572673793!5m2!1sen!2suk"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
           </div>
 
           {/* Image Section */}
           <div className="flex flex-wrap w-1/2 mx-4 gap-4">
             <div className="group relative overflow-hidden">
               <Image
-                src="/PetersPizza/pizzapeter.jpg"
+                src="/PetersPizza/venue2.jpg"
                 alt="Peter Pizza"
                 width={150}
                 height={100}
@@ -73,7 +87,7 @@ export default function LeicesterPage() {
             </div>
             <div className="group relative overflow-hidden">
               <Image
-                src="/PetersPizza/venue1.jpg"
+                src="/PetersPizza/food3.jpg"
                 alt="Venue"
                 width={150}
                 height={100}
@@ -82,7 +96,7 @@ export default function LeicesterPage() {
             </div>
             <div className="group relative overflow-hidden">
               <Image
-                src="/PetersPizza/peter-pizzeria-front.jpg"
+                src="/PetersPizza/banner-divider.jpg"
                 alt="Pizzeria Front"
                 width={150}
                 height={100}

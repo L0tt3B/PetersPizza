@@ -58,6 +58,19 @@ export default function LoughboroughPage() {
             >
               Make a Booking
             </a>
+            
+            {/* Google Map */}
+            <div className="mt-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.0775649530035!2d-1.20651!3d52.77272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48776418a3d36f47%3A0x1c16a875f3e81b82!2s17-18%20Baxter%20Gate%2C%20Loughborough%20LE11%201TG%2C%20UK!5e0!3m2!1sen!2suk!4v1691572673793!5m2!1sen!2suk"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
 
           {/* Image Section */}

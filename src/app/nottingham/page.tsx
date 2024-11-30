@@ -14,7 +14,11 @@ export default function NottinghamPage() {
   };
 
   return (
-    <div className={`bg-slate-100 flex flex-col min-h-screen transition-all duration-300 ${isSidenavOpen ? "mr-64" : "mr-0"}`}>
+    <div
+      className={`bg-slate-100 flex flex-col min-h-screen transition-all duration-300 ${
+        isSidenavOpen ? "mr-64" : "mr-0"
+      }`}
+    >
       {/* SideNav */}
       <SideNav isOpen={isSidenavOpen} onClose={() => setSidenavOpen(false)} />
 
@@ -49,7 +53,7 @@ export default function NottinghamPage() {
           <div className="w-1/2 mx-4 p-6 rounded-xl bg-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">About Our Venue</h2>
             <p className="text-base mb-8">
-                Our newest pizzeria based in Nottingham city centre.
+              Our newest pizzeria based in Nottingham city centre.
             </p>
             <p className="mb-8">We have space for groups of 1-100+ in our Nottingham pizzeria.</p>
             <a
@@ -58,35 +62,48 @@ export default function NottinghamPage() {
             >
               Make a Booking
             </a>
+
+            {/* Google Map */}
+            <div className="mt-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.0775649530035!2d-1.20651!3d52.77272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48776418a3d36f47%3A0x1c16a875f3e81b82!2s17-18%20Baxter%20Gate%2C%20Loughborough%20LE11%201TG%2C%20UK!5e0!3m2!1sen!2suk!4v1691572673793!5m2!1sen!2suk"
+                    width="100%"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
           </div>
 
           {/* Image Section */}
           <div className="flex flex-wrap w-1/2 mx-4 gap-4">
-            <div className="group relative overflow-hidden">
+            <div className="group relative w-fit overflow-hidden">
               <Image
-                src="/PetersPizza/pizzapeter.jpg"
+                src="/PetersPizza/peter-pizzeria-nottingham.jpg"
                 alt="Peter Pizza"
                 width={150}
                 height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                className="rounded-full group-hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <div className="group relative overflow-hidden">
+            <div className="group relative w-fit overflow-hidden">
               <Image
-                src="/PetersPizza/venue1.jpg"
+                src="/PetersPizza/peter-pizzeria-nottingham2.jpg"
                 alt="Venue"
                 width={150}
                 height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                className="rounded-full group-hover:scale-110 transition-transform duration-300"
               />
             </div>
             <div className="group relative overflow-hidden">
               <Image
-                src="/PetersPizza/peter-pizzeria-front.jpg"
+                src="/PetersPizza/peter-pizzeria-nottingham3.jpg"
                 alt="Pizzeria Front"
                 width={150}
                 height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                className="rounded-full group-hover:scale-110 transition-transform duration-300"
               />
             </div>
           </div>
