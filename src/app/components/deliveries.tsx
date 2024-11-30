@@ -8,21 +8,21 @@ const Deliveries = () => {
         <div className="flex flex-wrap justify-center justify-between mx-10">
             <a href="https://deliveroo.co.uk/brands/peters-pizzeria">
                 <Image 
-                    src="/deliveroo.png"
+                    src="/PetersPizza/deliveroo.png"
                     alt="Peter Logo"
                     width={150}
                     height={100}/>
             </a>
             <a href="https://www.just-eat.co.uk/restaurants-peterpizzeria-loughborough-university">
                 <Image 
-                    src="/JustEat.png"
+                    src="/PetersPizza/JustEat.png"
                     alt="Peter Logo"
                     width={150}
                     height={100}/>
             </a>
             <a href="https://www.ubereats.com/gb/store/peter-pizzeria-loughborough/1qVcE1y3RWSDjnY0PdvPuA">
                 <Image 
-                    src="/UberEats.png"
+                    src="/PetersPizza/UberEats.png"
                     alt="Peter Logo"
                     width={150}
                     height={100}/>

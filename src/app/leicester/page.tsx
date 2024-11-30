@@ -5,7 +5,7 @@ export default function LeicesterPage() {
   return (
     <div className="relative h-screen text-white">
       <Image
-        src="/background-venue-peter-pizzeria.jpg"
+        src="/PetersPizza/background-venue-peter-pizzeria.jpg"
         alt="Leicester Venue"
         fill
         className="object-cover absolute z-0"

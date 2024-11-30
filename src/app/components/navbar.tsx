@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({onToggleSidenav}) => {
           <div>
             <a className="text-black">
                 <Image 
-                    src="/PetersLogo.png"
+                    src="/PetersPizza/PetersLogo.png"
                     alt="Peter Logo"
                     width={100}
                     height={50}/>

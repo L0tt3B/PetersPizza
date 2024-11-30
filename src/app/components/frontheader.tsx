@@ -3,7 +3,7 @@ const FrontHeader = () => {
       <div className="w-full h-full text-white">
         {/* Video Background */}
         <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
-          <source src="/PETER-WEB-COVER-1.mp4" type="video/mp4"/>
+          <source src="/PetersPizza/PETER-WEB-COVER-1.mp4" type="video/mp4"/>
         </video>
         <div className="relative z-10 bg-black/50 w-full h-full flex flex-col items-center justify-center">
           <h1 className="text-center text-2xl font-bold justify-center my-10">PETER PIZZERIA</h1>
