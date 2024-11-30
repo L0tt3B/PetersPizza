@@ -10,7 +10,6 @@ import VenueComponent from "./components/venuecomp";
 import SideNav from "./components/sidenav";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import React, {useState} from "react";
-import DebugInfo from "./components/DebugInfo";
 
 
 export default function Home() {
@@ -35,7 +34,6 @@ export default function Home() {
         <MenuComponent />
         <VenueComponent />
         <Deliveries />
-        <DebugInfo />
       </main>
 
       {/* Footer */}

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,20 +11,18 @@ interface NavMenuProps {
 const NavVenues: React.FC<NavMenuProps> = ({ onClose }) => {
   const router = useRouter();
 
-  const validLocations = ["lboro", "leicester", "notts"];
+  const validLocations = ["loughborough", "leicester", "nottingham"];
 
   const handleLocationClick = (location: string) => {
     if (!validLocations.includes(location)) {
-      console.error("Invalid location:", location); // Debugging
+      console.error("Invalid location:", location);
       return;
     }
     router.push(`/${location}`); // Navigate to the static route
   };
 
   return (
-    <div
-      className="fixed top-0 pt-20 right-0 h-full transition-transform duration-200 ease-in-out translate-x-0 w-64 bg-black text-white shadow-xl z-40"
-    >
+    <div className="fixed top-0 pt-20 right-0 h-full transition-transform duration-200 ease-in-out translate-x-0 w-64 bg-black text-white shadow-xl z-40">
       <div className="top-0 mt-1 flex justify-between">
         <div className="flex hover:text-orange-500">
           <button
