@@ -40,7 +40,7 @@ const SideNav: React.FC<SidenavProps> = ({ isOpen }) => {
                 transition-transform duration-300 ease-in-out 
                 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
         >
-            <div className="mt-4 w-full pl-4 relative h-full">
+            <div className="mt-4 w-full pl-4 relative h-full overflow-hidden">
                 {/* Main Menu */}
                 <ul
                     className={`absolute transition-all duration-300 ease-in-out transform ${
