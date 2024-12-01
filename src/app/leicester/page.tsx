@@ -14,7 +14,7 @@ export default function LeicesterPage() {
   };
 
   return (
-    <div className={`bg-slate-100 flex flex-col min-h-screen transition-all duration-300 ${isSidenavOpen ? "mr-64" : "mr-0"}`}>
+    <div className={`bg-slate-100 flex flex-col min-h-screen transition-all ${isSidenavOpen ? "mr-52 duration-300" : "mr-0 duration-200"}`}>
       {/* SideNav */}
       <SideNav isOpen={isSidenavOpen} onClose={() => setSidenavOpen(false)} />
 
@@ -33,9 +33,7 @@ export default function LeicesterPage() {
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-          <h1 className="text-4xl md:text-6xl uppercase font-bold mb-4">
-            Leicester
-          </h1>
+          <h1 className="text-4xl md:text-6xl uppercase font-bold mb-4">Leicester</h1>
           <p className="text-lg md:text-xl px-4 text-center">
             Welcome to our Leicester venue! Explore what we offer at this amazing location.
           </p>
@@ -44,14 +42,16 @@ export default function LeicesterPage() {
 
       {/* Content Section */}
       <main className="flex-grow p-6 md:p-12">
-        <section className="max-w-4xl mx-auto text-center flex">
+        <section className="max-w-4xl mx-auto text-center flex flex-wrap md:flex-nowrap">
           {/* Text Section */}
-          <div className="w-1/2 mx-4 p-6 rounded-xl bg-white">
+          <div className="w-full md:w-1/2 mx-4 p-6 rounded-xl bg-white text-gray-900">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">About Our Venue</h2>
             <p className="text-base mb-8">
-            Our Leicester pizzeria  is a Grade II listed building in the city centre – a real piece of Leicester history. We have plenty of space for private events up to 250+ people.
+              Our Leicester pizzeria is a Grade II listed building in the city centre – a real piece of Leicester history. We have plenty of space for private events up to 250+ people.
             </p>
-            <p className="mb-8">Formerly a gentleman’s club, keep your eye out for an array of original features (but don’t look away from your pizza for too long, they have feelings you know!)  Devour your pizza and relax with friends in a homely & friendly environment.</p>
+            <p className="mb-8">
+              Formerly a gentleman’s club, keep your eye out for an array of original features (but don’t look away from your pizza for too long, they have feelings you know!) Devour your pizza and relax with friends in a homely & friendly environment.
+            </p>
             <a
               href="/bookings"
               className="inline-block px-6 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition"
@@ -71,36 +71,38 @@ export default function LeicesterPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-
           </div>
 
           {/* Image Section */}
-          <div className="flex flex-wrap w-1/2 mx-4 gap-4">
-            <div className="group relative overflow-hidden">
+          <div className="flex flex-wrap w-full md:w-1/2 mx-4 gap-4">
+            <div className="group relative overflow-hidden flex-1">
               <Image
                 src="/PetersPizza/venue2.jpg"
                 alt="Peter Pizza"
-                width={150}
-                height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                layout="responsive"
+                width={400}
+                height={300}
+                className="group-hover:scale-110 transition-transform duration-300 object-cover"
               />
             </div>
-            <div className="group relative overflow-hidden">
+            <div className="group relative overflow-hidden flex-1">
               <Image
                 src="/PetersPizza/food3.jpg"
                 alt="Venue"
-                width={150}
-                height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                layout="responsive"
+                width={400}
+                height={300}
+                className="group-hover:scale-110 transition-transform duration-300 object-cover"
               />
             </div>
-            <div className="group relative overflow-hidden">
+            <div className="group relative overflow-hidden flex-1">
               <Image
                 src="/PetersPizza/banner-divider.jpg"
                 alt="Pizzeria Front"
-                width={150}
-                height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                layout="responsive"
+                width={400}
+                height={300}
+                className="group-hover:scale-110 transition-transform duration-300 object-cover"
               />
             </div>
           </div>
