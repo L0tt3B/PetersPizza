@@ -48,7 +48,6 @@ const SideNav: React.FC<SidenavProps> = ({ isOpen }) => {
                             ? "translate-x-0 opacity-100"
                             : "-translate-x-full opacity-0"
                     }`}
-                    style={{ width: "12%", height: "100%" }}
                 >
                     <li className="p-2 font-light text-2xl font-bold hover:text-orange-500 duration-100">
                         Home
