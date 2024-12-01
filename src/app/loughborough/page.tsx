@@ -14,7 +14,7 @@ export default function LoughboroughPage() {
   };
 
   return (
-    <div className={`bg-slate-100 flex flex-col min-h-screen transition-all ${isSidenavOpen ? "mr-52 duration-300" : "mr-0 duration-200"}`}>
+    <div className={`bg-slate-100 flex flex-col min-h-screen overflow-y-auto transition-all ${isSidenavOpen ? "mr-52 duration-300" : "mr-0 duration-200"}`}>
       {/* SideNav */}
       <SideNav isOpen={isSidenavOpen} onClose={() => setSidenavOpen(false)} />
 
