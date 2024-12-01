@@ -75,28 +75,34 @@ export default function LeicesterPage() {
 
           {/* Image Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-1/2 mx-4">
-            <div className="relative overflow-hidden w-full h-48 sm:h-64 md:h-80">
+            <div className="relative overflow-hidden w-full">
               <Image
                 src="/PetersPizza/venue2.jpg"
                 alt="Peter Pizza"
-                layout="fill"
-                className="object-cover hover:scale-110 transition-transform duration-300"
+                layout="responsive"
+                width={400}
+                height={300}
+                className="object-contain"
               />
             </div>
-            <div className="relative overflow-hidden w-full h-48 sm:h-64 md:h-80">
+            <div className="relative overflow-hidden w-full">
               <Image
                 src="/PetersPizza/food3.jpg"
                 alt="Venue"
-                layout="fill"
-                className="object-cover hover:scale-110 transition-transform duration-300"
+                layout="responsive"
+                width={400}
+                height={300}
+                className="object-contain"
               />
             </div>
-            <div className="relative overflow-hidden w-full h-48 sm:h-64 md:h-80">
+            <div className="relative overflow-hidden w-full">
               <Image
                 src="/PetersPizza/banner-divider.jpg"
                 alt="Pizzeria Front"
-                layout="fill"
-                className="object-cover hover:scale-110 transition-transform duration-300"
+                layout="responsive"
+                width={400}
+                height={300}
+                className="object-contain"
               />
             </div>
           </div>
