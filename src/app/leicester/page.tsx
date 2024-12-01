@@ -74,35 +74,29 @@ export default function LeicesterPage() {
           </div>
 
           {/* Image Section */}
-          <div className="flex flex-wrap w-full md:w-1/2 mx-4 gap-4">
-            <div className="group relative overflow-hidden flex-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full md:w-1/2 mx-4">
+            <div className="relative overflow-hidden w-full h-48 sm:h-64 md:h-80">
               <Image
                 src="/PetersPizza/venue2.jpg"
                 alt="Peter Pizza"
-                layout="responsive"
-                width={400}
-                height={300}
-                className="group-hover:scale-110 transition-transform duration-300 object-cover"
+                layout="fill"
+                className="object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <div className="group relative overflow-hidden flex-1">
+            <div className="relative overflow-hidden w-full h-48 sm:h-64 md:h-80">
               <Image
                 src="/PetersPizza/food3.jpg"
                 alt="Venue"
-                layout="responsive"
-                width={400}
-                height={300}
-                className="group-hover:scale-110 transition-transform duration-300 object-cover"
+                layout="fill"
+                className="object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
-            <div className="group relative overflow-hidden flex-1">
+            <div className="relative overflow-hidden w-full h-48 sm:h-64 md:h-80">
               <Image
                 src="/PetersPizza/banner-divider.jpg"
                 alt="Pizzeria Front"
-                layout="responsive"
-                width={400}
-                height={300}
-                className="group-hover:scale-110 transition-transform duration-300 object-cover"
+                layout="fill"
+                className="object-cover hover:scale-110 transition-transform duration-300"
               />
             </div>
           </div>
@@ -116,3 +110,4 @@ export default function LeicesterPage() {
     </div>
   );
 }
+
