@@ -33,9 +33,7 @@ export default function LoughboroughPage() {
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-          <h1 className="text-4xl md:text-6xl uppercase font-bold mb-4">
-            Loughborough
-          </h1>
+          <h1 className="text-4xl md:text-6xl uppercase font-bold mb-4">Loughborough</h1>
           <p className="text-lg md:text-xl px-4 text-center">
             Welcome to our Loughborough venue! Explore what we offer at this amazing location.
           </p>
@@ -43,13 +41,13 @@ export default function LoughboroughPage() {
       </div>
 
       {/* Content Section */}
-      <main className="flex-grow overflow-y-auto p-6 md:p-12">
-        <section className="max-w-4xl mx-auto text-center flex">
+      <main className="flex-grow p-6 md:p-12">
+        <section className="max-w-4xl mx-auto text-center flex flex-wrap md:flex-nowrap gap-4">
           {/* Text Section */}
-          <div className="w-1/2 mx-4 p-6 rounded-xl bg-white">
+          <div className="flex-1 p-6 rounded-xl bg-white text-gray-900">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">About Our Venue</h2>
             <p className="text-base mb-8">
-                Loughborough is home to our very first PETER pizzeria, which opened in 2013. Originally the Crown & Cushion Public House, our newest venue is now located on Baxter Gate, decorated in our signature style: relaxed and quirky in all the right places. From cool upcycled furniture to the best pizza you’ll find outside of Italy, we’re truly individual.
+              Loughborough is home to our very first PETER pizzeria, which opened in 2013. Originally the Crown & Cushion Public House, our venue is decorated in our signature style: relaxed and quirky in all the right places.
             </p>
             <p className="mb-8">We have space for groups of 1-100+ in our Loughborough pizzeria.</p>
             <a
@@ -58,7 +56,7 @@ export default function LoughboroughPage() {
             >
               Make a Booking
             </a>
-            
+
             {/* Google Map */}
             <div className="mt-6">
               <iframe
@@ -74,32 +72,29 @@ export default function LoughboroughPage() {
           </div>
 
           {/* Image Section */}
-          <div className="flex flex-wrap w-1/2 mx-4 gap-4">
-            <div className="group relative overflow-hidden">
+          <div className="flex-1 flex flex-col gap-4">
+            <div className="relative flex-grow w-full h-full">
               <Image
                 src="/PetersPizza/pizzapeter.jpg"
                 alt="Peter Pizza"
-                width={150}
-                height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                layout="fill"
+                className="object-contain"
               />
             </div>
-            <div className="group relative overflow-hidden">
+            <div className="relative flex-grow w-full h-full">
               <Image
                 src="/PetersPizza/venue1.jpg"
                 alt="Venue"
-                width={150}
-                height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                layout="fill"
+                className="object-contain"
               />
             </div>
-            <div className="group relative overflow-hidden">
+            <div className="relative flex-grow w-full h-full">
               <Image
                 src="/PetersPizza/peter-pizzeria-front.jpg"
                 alt="Pizzeria Front"
-                width={150}
-                height={100}
-                className="group-hover:scale-110 transition-transform duration-300"
+                layout="fill"
+                className="object-contain"
               />
             </div>
           </div>
