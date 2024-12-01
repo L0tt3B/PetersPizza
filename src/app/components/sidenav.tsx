@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { faBars, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavMenu from "./navMenu";
 import NavVenues from "./navVenues";
@@ -10,7 +10,7 @@ interface SidenavProps {
     onClose: () => void;
 }
 
-const SideNav: React.FC<SidenavProps> = ({ isOpen, onClose }) => {
+const SideNav: React.FC<SidenavProps> = ({ isOpen }) => {
     const [activeComponent, setActiveComponent] = useState<"main" | "menu" | "venues" | "about">(
         "main"
     );
