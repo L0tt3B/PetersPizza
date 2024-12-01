@@ -36,9 +36,9 @@ const SideNav: React.FC<SidenavProps> = ({ isOpen }) => {
 
     return (
         <div
-            className={`fixed pt-20 top-0 right-0 h-full w-64 bg-black text-white shadow-xl z-30 overflow-hidden
+            className={`fixed pt-20 top-0 right-0 h-full w-64 bg-black text-white shadow-xl z-30
                 transition-transform duration-300 ease-in-out 
-                ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                ${isOpen ? "translate-x-0 overflow-hidden" : "translate-x-full"}`}
         >
             <div className="mt-4 w-full pl-4 relative h-full">
                 {/* Main Menu */}
