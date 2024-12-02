@@ -19,7 +19,6 @@ const NavVenues: React.FC<NavMenuProps> = ({ onClose }) => {
 
   const handleLocationClick = (path: string) => {
     router.push(path);
-    router.refresh();
   };
 
   return (
