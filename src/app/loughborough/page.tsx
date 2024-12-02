@@ -5,20 +5,30 @@ import Navbar from "../components/navbar";
 import PeterFooter from "../components/peterfooter";
 import SideNav from "../components/sidenav";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function LoughboroughPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
+  const router = useRouter();
+
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const handleRouteChange = () => {
+      document.body.style.overflowY = "auto";
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router]);
 
   const toggleSidenav = () => {
     setSidenavOpen(!isSidenavOpen);
   };
 
   return (
-    <div className={`bg-slate-100 flex flex-col min-h-screen overflow-y-scroll transition-all ${isSidenavOpen ? "mr-52 duration-300" : "mr-0 duration-200"}`}>
+    <div className={`bg-slate-100 flex flex-col min-h-screen overflow-y-auto transition-all ${isSidenavOpen ? "mr-52 duration-300" : "mr-0 duration-200"}`}>
       {/* SideNav */}
       <SideNav isOpen={isSidenavOpen} onClose={() => setSidenavOpen(false)} />
 
