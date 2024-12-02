@@ -74,30 +74,36 @@ export default function LeicesterPage() {
   </div>
 
   {/* Image Section */}
-  <div className="flex-1 flex flex-col gap-4">
-    <div className="relative flex-grow w-full h-full">
-      <Image
-        src="/PetersPizza/venue2.jpg"
-        alt="Peter Pizza"
-        layout="fill"
-        className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
-      />
+  <div className="flex-1 flex flex-col gap-4 group">
+    <div className="relative flex-grow w-full h-64 overflow-hidden rounded-lg">
+      <div className="w-full h-full">
+        <Image
+          src="/PetersPizza/venue2.jpg"
+          alt="Peter Pizza"
+          layout="fill"
+          className="object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
     </div>
-    <div className="relative flex-grow w-full h-full">
-      <Image
-        src="/PetersPizza/food3.jpg"
-        alt="Venue"
-        layout="fill"
-        className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
-      />
+    <div className="relative flex-grow w-full h-64 overflow-hidden rounded-lg">
+      <div className="w-full h-full">
+        <Image
+          src="/PetersPizza/food3.jpg"
+          alt="Venue"
+          layout="fill"
+          className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
     </div>
-    <div className="relative flex-grow w-full h-full">
-      <Image
-        src="/PetersPizza/banner-divider.jpg"
-        alt="Pizzeria Front"
-        layout="fill"
-        className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
-      />
+    <div className="relative flex-grow w-full h-64 overflow-hidden rounded-lg">
+      <div className="w-full h-full">
+        <Image
+          src="/PetersPizza/banner-divider.jpg"
+          alt="Pizzeria Front"
+          layout="fill"
+          className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
+        />
+      </div>
     </div>
   </div>
 </section>
