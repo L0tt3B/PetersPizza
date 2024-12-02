@@ -73,28 +73,28 @@ export default function LoughboroughPage() {
 
           {/* Image Section */}
           <div className="flex-1 flex flex-col gap-4">
-            <div className="rounded relative flex-grow w-full h-full transition-transform duration-300 group-hover:scale-105">
+            <div className="rounded-lg relative flex-grow w-full h-full">
               <Image
                 src="/PetersPizza/pizzapeter.jpg"
                 alt="Peter Pizza"
                 layout="fill"
-                className="object-contain"
+                className="object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <div className="rounded relative flex-grow w-full h-full transition-transform duration-300 group-hover:scale-105">
+            <div className="rounded relative flex-grow w-full h-full">
               <Image
                 src="/PetersPizza/venue1.jpg"
                 alt="Venue"
                 layout="fill"
-                className="object-contain"
+                className="object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <div className="rounded relative flex-grow w-full h-full transition-transform duration-300 group-hover:scale-105">
+            <div className="rounded relative flex-grow w-full h-full">
               <Image
                 src="/PetersPizza/peter-pizzeria-front.jpg"
                 alt="Pizzeria Front"
                 layout="fill"
-                className="object-contain"
+                className="object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
           </div>
