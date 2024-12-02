@@ -78,7 +78,7 @@ export default function LoughboroughPage() {
                 src="/PetersPizza/pizzapeter.jpg"
                 alt="Peter Pizza"
                 layout="fill"
-                className="object-contain"
+                className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="relative flex-grow w-full h-full">
@@ -86,7 +86,7 @@ export default function LoughboroughPage() {
                 src="/PetersPizza/venue1.jpg"
                 alt="Venue"
                 layout="fill"
-                className="object-contain"
+                className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <div className="relative flex-grow w-full h-full">
@@ -94,7 +94,7 @@ export default function LoughboroughPage() {
                 src="/PetersPizza/peter-pizzeria-front.jpg"
                 alt="Pizzeria Front"
                 layout="fill"
-                className="object-contain"
+                className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           </div>

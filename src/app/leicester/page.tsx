@@ -80,7 +80,7 @@ export default function LeicesterPage() {
         src="/PetersPizza/venue2.jpg"
         alt="Peter Pizza"
         layout="fill"
-        className="object-contain"
+        className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
       />
     </div>
     <div className="relative flex-grow w-full h-full">
@@ -88,7 +88,7 @@ export default function LeicesterPage() {
         src="/PetersPizza/food3.jpg"
         alt="Venue"
         layout="fill"
-        className="object-contain"
+        className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
       />
     </div>
     <div className="relative flex-grow w-full h-full">
@@ -96,7 +96,7 @@ export default function LeicesterPage() {
         src="/PetersPizza/banner-divider.jpg"
         alt="Pizzeria Front"
         layout="fill"
-        className="object-contain"
+        className="rounded object-contain transition-transform duration-300 group-hover:scale-105"
       />
     </div>
   </div>
