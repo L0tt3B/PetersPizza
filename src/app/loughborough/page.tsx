@@ -13,14 +13,16 @@ export default function LoughboroughPage() {
 
 
   useEffect(() => {
-    const handleRouteChange = () => {
-      document.body.style.overflowY = "auto";
-    };
+    if (typeof window !== "undefined") {
+      const handleRouteChange = () => {
+        document.body.style.overflowY = "auto";
+      };
 
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
+      router.events.on("routeChangeComplete", handleRouteChange);
+      return () => {
+        router.events.off("routeChangeComplete", handleRouteChange);
+      };
+    }
   }, [router]);
 
   const toggleSidenav = () => {
