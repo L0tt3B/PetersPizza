@@ -1,13 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import Navbar from "../components/navbar";
 import PeterFooter from "../components/peterfooter";
-import SideNav from "../components/sidenav";
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
 
 export default function LoughboroughPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
+
+  const Navbar = dynamic(() => import("../components/navbar"), { ssr: false });
+  const SideNav = dynamic(() => import("../components/sidenav"), { ssr: false });
 
   useEffect(() => {
     window.scrollTo(0, 0);
