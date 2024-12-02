@@ -79,7 +79,7 @@ export default function NottinghamPage() {
                   src="/PetersPizza/peter-pizzeria-nottingham.jpg"
                   alt="Peter Pizza"
                   layout="fill"
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 hover:scale-105"
                 />
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function NottinghamPage() {
                   src="/PetersPizza/peter-pizzeria-nottingham2.jpg"
                   alt="Venue"
                   layout="fill"
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 hover:scale-105"
                 />
               </div>
             </div>
@@ -99,7 +99,7 @@ export default function NottinghamPage() {
                   src="/PetersPizza/peter-pizzeria-nottingham3.jpg"
                   alt="Pizzeria Front"
                   layout="fill"
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 hover:scale-105"
                 />
               </div>
             </div>
