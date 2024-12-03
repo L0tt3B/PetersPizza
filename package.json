@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "export": "next export && cp -r static-data out/static-data"
@@ -19,6 +19,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
+  "homepage": "https://l0tt3b.github.io/PetersPizza",
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
