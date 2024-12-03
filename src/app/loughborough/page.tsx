@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import SideNav from "../components/sidenav";
