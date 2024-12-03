@@ -8,13 +8,7 @@ import PeterFooter from "../components/peterfooter";
 
 export default function LoughboroughPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
-
-  useEffect(() => {
-    window.scrollTo(0, 0); // Ensure the viewport is reset
-    document.body.style.overflowY = "auto"; // Ensure scrollbar is active
-  }, []);
   
-
   const toggleSidenav = () => {
     setSidenavOpen(!isSidenavOpen);
   };
