@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -9,18 +9,11 @@ interface NavMenuProps {
 }
 
 const NavVenues: React.FC<NavMenuProps> = ({ onClose }) => {
-  const router = useRouter();
-
   const locations = [
     { name: "Loughborough", path: "/loughborough" },
     { name: "Leicester", path: "/leicester" },
     { name: "Nottingham", path: "/nottingham" },
   ];
-
-  const handleLocationClick = (path: string) => {
-    router.push(path);
-    router.refresh();
-  };
 
   return (
     <div className="w-full">
@@ -33,12 +26,10 @@ const NavVenues: React.FC<NavMenuProps> = ({ onClose }) => {
       </div>
       <ul>
         {locations.map((location) => (
-          <li
-            key={location.name}
-            onClick={() => handleLocationClick(location.path)}
-            className="p-2 uppercase font-light text-2xl font-bold hover:text-orange-500 cursor-pointer"
-          >
-            {location.name}
+          <li key={location.name} className="p-2 uppercase font-light text-2xl font-bold hover:text-orange-500">
+            <Link href={location.path}>
+              <a className="cursor-pointer">{location.name}</a>
+            </Link>
           </li>
         ))}
       </ul>
