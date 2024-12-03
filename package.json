@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export && cp -r static-data out/static-data"
+    "export": "next export",
+    "deploy": "npm run build && npm run export && touch out/.nojekyll && gh-pages -d out"
   },
+  "homepage": "https://L0tt3B.github.io/PetersPizza",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
@@ -17,7 +19,8 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "next": "^15.0.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",

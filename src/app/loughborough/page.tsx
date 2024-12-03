@@ -4,16 +4,10 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import PeterFooter from "../components/peterfooter";
 import SideNav from "../components/sidenav";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function LoughboroughPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.location.reload();
-    }
-  }, []);
 
   const toggleSidenav = () => {
     setSidenavOpen(!isSidenavOpen);
