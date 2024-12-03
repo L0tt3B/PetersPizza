@@ -10,8 +10,17 @@ export default function LoughboroughPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    document.body.style.overflow = "auto"; // Reset scrolling
+    return () => {
+      document.body.style.overflow = ""; // Clean up
+    };
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Ensure the viewport is reset
+    document.body.style.overflowY = "auto"; // Ensure scrollbar is active
+  }, []);
+  
 
   const toggleSidenav = () => {
     setSidenavOpen(!isSidenavOpen);
@@ -19,8 +28,8 @@ export default function LoughboroughPage() {
 
   return (
     <div
-      className={`bg-slate-100 flex flex-col min-h-screen overflow-y-auto transition-all ${
-        isSidenavOpen ? "mr-52 duration-300" : "mr-0 duration-200"
+      className={`bg-slate-100 flex flex-col min-h-screen overflow-y-auto transition-transform ${
+        isSidenavOpen ? "translate-x-52" : "translate-x-0"
       }`}
     >
       {/* SideNav */}
