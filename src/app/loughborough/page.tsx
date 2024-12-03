@@ -10,13 +10,6 @@ export default function LoughboroughPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = "auto"; // Reset scrolling
-    return () => {
-      document.body.style.overflow = ""; // Clean up
-    };
-  }, []);
-
-  useEffect(() => {
     window.scrollTo(0, 0); // Ensure the viewport is reset
     document.body.style.overflowY = "auto"; // Ensure scrollbar is active
   }, []);
