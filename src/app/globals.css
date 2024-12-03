@@ -14,9 +14,16 @@
   }
 }
 
-body {
+html, body {
+  height: 100%;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: auto;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.debug-outline {
+  outline: 1px solid red; /* For debugging */
 }
