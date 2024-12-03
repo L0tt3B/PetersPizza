@@ -8,14 +8,14 @@ import PeterFooter from "../components/peterfooter";
 
 export default function LoughboroughPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
-  
+
   const toggleSidenav = () => {
     setSidenavOpen(!isSidenavOpen);
   };
 
   return (
     <div
-      className={`bg-slate-100 flex flex-col min-h-screen overflow-y-auto transition-transform ${
+      className={`bg-slate-100 flex flex-col min-h-screen transition-transform ${
         isSidenavOpen ? "translate-x-52" : "translate-x-0"
       }`}
     >
@@ -50,12 +50,14 @@ export default function LoughboroughPage() {
       {/* Content Section */}
       <main className="flex-grow p-6 md:p-12">
         <section className="max-w-4xl mx-auto text-center flex flex-wrap md:flex-nowrap gap-4">
-        <div className="flex-1 p-6 rounded-xl bg-white text-gray-900">
+          <div className="flex-1 p-6 rounded-xl bg-white text-gray-900">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">About Our Venue</h2>
             <p className="text-base mb-8">
               Loughborough is home to our very first PETER pizzeria, which opened in 2013. Originally the Crown & Cushion Public House, our venue is decorated in our signature style: relaxed and quirky in all the right places.
             </p>
-            <p className="mb-8">We have space for groups of 1-100+ in our Loughborough pizzeria.</p>
+            <p className="mb-8">
+              We have space for groups of 1-100+ in our Loughborough pizzeria.
+            </p>
             <a
               href="/bookings"
               className="inline-block px-6 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition"
@@ -120,4 +122,3 @@ export default function LoughboroughPage() {
     </div>
   );
 }
-
