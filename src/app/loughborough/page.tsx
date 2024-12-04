@@ -85,28 +85,34 @@ export default function LoughboroughPage() {
           {/* Image Section */}
           <div className="flex-1 flex flex-col gap-4 group">
               <div className="relative flex-grow w-full h-64 overflow-hidden rounded-lg">
-                <Image
-                  src="/PetersPizza/pizzapeter.jpg"
-                  alt="Peter Pizza"
-                  layout="fill"
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
+                <div className="w-full h-full">
+                  <Image
+                    src="/PetersPizza/pizzapeter.jpg"
+                    alt="Peter Pizza"
+                    layout="fill"
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
               <div className="relative flex-grow w-full h-64 overflow-hidden rounded-lg">
-                <Image
-                  src="/PetersPizza/venue1.jpg"
-                  alt="Venue"
-                  layout="fill"
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
+                <div className="w-full h-full">
+                  <Image
+                    src="/PetersPizza/venue1.jpg"
+                    alt="Venue"
+                    layout="fill"
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
               <div className="relative flex-grow w-full h-64 overflow-hidden rounded-lg">
-                <Image
-                  src="/PetersPizza/peter-pizzeria-front.jpg"
-                  alt="Pizzeria Front"
-                  layout="fill"
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                />
+                <div className="w-full h-full">
+                  <Image
+                    src="/PetersPizza/peter-pizzeria-front.jpg"
+                    alt="Pizzeria Front"
+                    layout="fill"
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
               </div>
             </div>
         </section>
