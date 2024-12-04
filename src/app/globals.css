@@ -16,7 +16,6 @@
 
 html, body {
   height: 100%;
-  overflow-y: scroll; /* Forces scrollbar to always appear */
   margin: 0;
   padding: 0;
   color: var(--foreground);
