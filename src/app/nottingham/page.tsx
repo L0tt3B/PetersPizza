@@ -4,10 +4,20 @@ import Image from "next/image";
 import Navbar from "../components/navbar";
 import PeterFooter from "../components/peterfooter";
 import SideNav from "../components/sidenav";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function NottinghamPage() {
   const [isSidenavOpen, setSidenavOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    document.body.style.overflowY = "auto";
+
+    return () => {
+      document.body.style.overflowY = "";
+    };
+  }, []);
 
   const toggleSidenav = () => {
     setSidenavOpen(!isSidenavOpen);
